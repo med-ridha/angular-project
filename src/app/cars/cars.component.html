@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h1>Cars</h1>
+    <button routerLink="/newcar" class="rounded-circle">Add Car + </button>
+  </div>
+<div class="d-flex">
+  <input type="text" class="form-control rounded-pill" (keyup)="searchCars()" [(ngModel)]="search">
+</div>
+<h2 *ngIf='cars.length == 0'>there is no cars at the moment, please check back later!</h2>
+<table class="table bg-secondary" *ngIf='cars.length > 0' >
+  <thead>
+    <tr>
+      <th class="bg-secondary bg-gradient" scope="col">Name</th>
+      <th class="bg-secondary bg-gradient" scope="col">Model</th>
+      <th class="bg-secondary bg-gradient" scope="col">Price</th>
+      <th class="bg-secondary bg-gradient" scope="col">Show</th>
+    </tr>
+  </thead>
+  <tbody class="bg-secondary bg-gradient">
+    <tr class="bg-secondary bg-gradient" *ngFor="let car of cars">
+      <td class="bg-secondary bg-gradient">{{car.name}}</td>
+      <td class="bg-secondary bg-gradient">{{car.model}}</td>
+      <td class="bg-secondary bg-gradient">{{car.price}}</td>
+      <td class="bg-secondary bg-gradient"><button class="btn btn-primary" (click)="show(car.id)">show</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

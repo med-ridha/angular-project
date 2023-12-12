@@ -1,0 +1,13 @@
+
+<button class="btn btn-primary rounded-circle" (click)="goBack()"><<<</button>
+ <div *ngIf='car'>
+   <h1>Name: {{car.name}}</h1>
+   <img src="{{car.img}}" width="400" height="400" alt="">
+   <h2>Model: {{car.model}}</h2>
+   <h2>Year: {{car.year}}</h2>
+   <h2>Engine: {{car.engine}}</h2>
+   <h2>Transmission: {{car.transmission}}</h2>
+   <h2>Color: {{car.color}}</h2>
+   <h2>price: {{car.price }}</h2>
+   <button class="btn btn-primary" (click)="buy(car)">Buy</button>
+ </div>
