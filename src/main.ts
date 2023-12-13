@@ -91,7 +91,7 @@ let cars = [
     price: 42000,
     description: 'This is a great car',
     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mclarenlife.com%2Fcdn-cgi%2Fimage%2Fformat%3Dauto%2Conerror%3Dredirect%2Cwidth%3D1920%2Cheight%3D1920%2Cfit%3Dscale-down%2Fhttps%3A%2F%2Fwww.mclarenlife.com%2Fattachments%2F20190720_162524-jpg.196023%2F&f=1&nofb=1&ipt=2e3f210b2530f38f8aa8c06d8573dd04c36e6ae84dcf44d6e58ed1b6e5810328&ipo=images',
-  }
+  },
 ]
 if (!localStorage.getItem('cars'))
   localStorage.setItem('cars', JSON.stringify(cars));

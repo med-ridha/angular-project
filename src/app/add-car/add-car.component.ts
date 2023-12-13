@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 interface Car {
+  id: number,
   name: string,
   model: string,
   year: number,
@@ -27,10 +28,14 @@ export class AddCarComponent {
       alert('Please fill all fields');
     } else {
       const cars = JSON.parse(localStorage.getItem('cars') || '[]');
+      this.car.id = cars.length + 1;
       cars.push(this.car);
       localStorage.setItem('cars', JSON.stringify(cars));
       this.car = {} as Car;
       alert('Car added');
     }
+  }
+  goBack(): void {
+    window.history.back();
   }
 }

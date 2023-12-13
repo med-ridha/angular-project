@@ -11,7 +11,6 @@ export class ShowCarComponent {
   car: any = this.cars[this.id - 1];
   constructor() { }
   buy(car: any): void {
-
     alert(`You bought ${car.name} ${car.model} for $${car.price}`);
   }
   goBack(): void {
