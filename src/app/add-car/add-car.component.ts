@@ -20,6 +20,17 @@ export class AddCarComponent {
   car: Car;
   constructor() { this.car = {} as Car; }
   addCar(): void {
-    alert(this.car.name);
+    if (!this.car.name || !this.car.model || !this.car.year ||
+      !this.car.engine || !this.car.transmission ||
+      !this.car.color || !this.car.price ||
+      !this.car.description || !this.car.img) {
+      alert('Please fill all fields');
+    } else {
+      const cars = JSON.parse(localStorage.getItem('cars') || '[]');
+      cars.push(this.car);
+      localStorage.setItem('cars', JSON.stringify(cars));
+      this.car = {} as Car;
+      alert('Car added');
+    }
   }
 }

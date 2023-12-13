@@ -2,43 +2,42 @@
 <form (submit)="addCar()">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" [(ngModel)]="car.name" name="name" id="name" placeholder="Enter name">
+    <input type="text" class="form-control" required [(ngModel)]="car.name" name="name" id="name" placeholder="Enter name">
   </div>
   <div class="form-group">
     <label for="model">Model</label>
-    <input type="text" class="form-control" [(ngModel)]="car.model" name="model" id="model" placeholder="Enter model">
+    <input type="text" class="form-control" required [(ngModel)]="car.model" name="model" id="model" placeholder="Enter model">
   </div>
   <div class="form-group">
     <label for="price">Price</label>
-    <input type="number" class="form-control" [(ngModel)]="car.price" name="price" id="price" placeholder="Enter price">
+    <input type="number" class="form-control" required [(ngModel)]="car.price" name="price" id="price" placeholder="Enter price">
   </div>
   <div class="form-group">
     <label for="image">Image</label>
-    <input type="text" class="form-control" [(ngModel)]="car.img" name="image" id="image" placeholder="Enter image">
+    <input type="text" class="form-control"  required [(ngModel)]="car.img" name="image" id="image" placeholder="Enter image">
   </div>
   <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" [(ngModel)]="car.description" name="description" id="description"
+    <textarea class="form-control" required [(ngModel)]="car.description" name="description" id="description"
       rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="year">Year</label>
-    <input type="number" class="form-control" [(ngModel)]="car.year" name="year" id="year" placeholder="Enter year">
+    <input type="number" required class="form-control" [(ngModel)]="car.year" name="year" id="year" placeholder="Enter year">
   </div>
   <div class="form-group">
     <label for="color">Color</label>
-    <input type="text" class="form-control" [(ngModel)]="car.color" name="color" id="color" placeholder="Enter color">
+    <input type="text" required class="form-control" [(ngModel)]="car.color" name="color" id="color" placeholder="Enter color">
   </div>
   <div class="form-group">
     <label for="transmission">Transmission</label>
-    <input type="text" class="form-control" [(ngModel)]="car.transmission" name="transmission" id="transmission"
+    <input type="text" required class="form-control" [(ngModel)]="car.transmission" name="transmission" id="transmission"
       placeholder="Enter transmission">
   </div>
   <div class="form-group">
     <label for="engine">Engine</label>
-    <input type="text" class="form-control" [(ngModel)]="car.engine" name="engine" id="engine"
+    <input type="text" required class="form-control" [(ngModel)]="car.engine" name="engine" id="engine"
       placeholder="Enter engine">
   </div>
-
 
   <button type="submit" class="btn btn-primary">Submit</button>
